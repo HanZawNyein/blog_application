@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+SITE_ID = 1
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'blog.apps.BlogConfig',
-    'taggit'
+    'taggit',
+
+    # sitemap
+    'django.contrib.sites',
+    'django.contrib.sitemaps'
 ]
 
 MIDDLEWARE = [
@@ -127,8 +132,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'hanzawnyineonline@gmail.com'
-# EMAIL_HOST_PASSWORD='oqrfcwavdtkhiomi'
+# EMAIL_HOST_PASSWORD='***************'
 EMAIL_PORT = 587
 EMAIL_USE_LTS=True
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
