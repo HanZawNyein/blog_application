@@ -15,4 +15,6 @@ urlpatterns = [
     #feed
     path('feed/',LatestPostFeed(),name='post_feed'),
     # https://github.com/yang991178/fluent-reader/releases/tag/v1.1.3
+
+    path('search/',views.post_search,name='post_search')
 ]
